@@ -1,8 +1,8 @@
  Bacteria[] joes;
- int BACK_SIZE=800;
+ int BACK_SIZE=600;
  void setup()   
  {     
- 	   size(800,800);
+ 	   size(600,600);
  	   joes = new Bacteria[100];
  	   for(int i = 0; i<joes.length; i++){
  	   		joes[i]=new Bacteria(BACK_SIZE/2, BACK_SIZE/2, (int)(Math.random()*256));
@@ -29,41 +29,41 @@
  		if(mousePressed==true){
  			if(mouseX>myX)
  			{
- 				myX=(int)(Math.random()*11)-1+myX;
+ 				myX=(int)(Math.random()*9)+myX;
  			}
  			else if(mouseX<myX)
  			{
- 				myX=(int)(Math.random()*11)-9+myX;
+ 				myX=(int)(Math.random()*9)-8+myX;
  			}
  			else
  			{
- 				myX=(int)(Math.random()*11)-5+myX;
+ 				myX=(int)(Math.random()*9)-4+myX;
  			}
  			
 
  			if(mouseY>myY)
  			{
- 				myY=(int)(Math.random()*11)-1+myY;
+ 				myY=(int)(Math.random()*9)+myY;
  			}
  			else if(mouseY<myY)
  			{
- 				myY=(int)(Math.random()*11)-9+myY;
+ 				myY=(int)(Math.random()*9)-8+myY;
  			}
  			else
  			{
- 				myY=(int)(Math.random()*11)-5+myY;
+ 				myY=(int)(Math.random()*9)-4+myY;
  			}
  			
  		}
  		else
  		{
- 			myX=(int)(Math.random()*11)-5+myX;
- 			myY=(int)(Math.random()*11)-5+myY;
+ 			myX=(int)(Math.random()*9)-4+myX;
+ 			myY=(int)(Math.random()*9)-4+myY;
  		}
  	}
  	void show(){
  		fill(0, myCol, 255-myCol,150);
  		stroke(0, myCol, 255-myCol);
- 		ellipse(myX, myY, 50, 50);
+ 		ellipse(myX, myY, 40, 40);
  	}
  }    
